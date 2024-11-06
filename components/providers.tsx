@@ -9,9 +9,7 @@ export default function Providers({
   children: React.ReactNode;
 }>) {
   return (
-    <CopilotKit
-      publicApiKey={`${process.env.NEXT_PUBLIC_COPILOT_CLOUD_PUBLIC_API_KEY}`}
-    >
+    <CopilotKit runtimeUrl="/api/copilotkit">
       {children}
       <CopilotPopup />
     </CopilotKit>
